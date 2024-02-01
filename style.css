@@ -63,7 +63,7 @@ p{
     color: #1a0f00;
 }
 .brand h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     color: white;
     letter-spacing: .3rem;
@@ -92,7 +92,7 @@ p{
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 /* Change the color of links on hover */
@@ -180,7 +180,7 @@ p{
 #hero h1{
     display: block;
     width: fit-content;
-    font-size: 4rem;
+    font-size: 3.5rem;
     position: relative;
     color: transparent;
     animation: text_reavel .5s ease forwards;
@@ -496,7 +496,7 @@ p{
 }
 #footer p{
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     align-items: center;
     justify-content: center;
 }
