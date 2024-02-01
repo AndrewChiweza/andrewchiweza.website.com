@@ -1,0 +1,618 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Arial', serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 109vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p{
+    color: #1a0f00;
+    
+    line-height: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: #1a0f00;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.section-title span{
+    color: #ff9900;
+
+}
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #ff9900;
+    background-color: transparent;
+    border: 2px solid #ff9900;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color,color;
+}
+
+.cta:hover{
+    background-color: #ff9900;
+    color: #1a0f00;
+}
+.brand h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: .3rem;
+}
+.brand h1 span{
+    color: #ff9900;
+}
+
+
+/*Navigation Bar starts here*/
+/* Add a black background color to the top navigation */
+.topnav {
+  position: fixed;  
+  background-image: linear-gradient(60deg,#29323c 0%, #485563 100%);
+  overflow: hidden;
+  width: 100%;
+  z-index: 10;
+  
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ff9900;
+  color: #1a0f00;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #ff9900;
+  color: #1a0f00;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.topnav .brand{
+    float: right;
+}
+.topnav .brand h1{
+    font-size: 1.4rem;
+    padding-top: 20px;
+    padding-right: 25px;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/*@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}*/
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 700px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav .brand{
+    display: none;
+    float: none;
+  }
+}
+/*Navigation Bar section Ends here*/
+
+/* start of the Hero section*/
+#hero{
+    background-image: url(img/w.coders.jpg);
+    background-size: cover;
+    background-position: top cover;
+    position: relative;
+    z-index: 1;
+}
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reavel .5s ease forwards;
+    animation-delay: 1s;
+}
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+    animation: text_reavel_name .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ff9900;
+    animation: text_reavel_box 1s ease;
+    animation-delay: .5s;
+}
+#hero h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2) span{
+        animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+
+/* end of the Hero section*/
+
+
+/*start of the services section*/
+#services .services{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 90px;
+}
+
+
+#services .service-top p {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    line-height: 2rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+#services .service-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+}
+#services .service-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px;
+    background-image: url(img/pc.jpg);
+    background-size: cover;
+    margin: 10px 5px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+#services .service-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg,#29323c 0%, #485563 100%);
+    opacity: .8;
+    z-index: -1;
+}
+#services .service-bottom .icons {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+}
+#services .service-item h2{
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: left;
+}
+#services .service-item p{
+    color: white;
+    text-align: left;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+}
+/* end of the services section*/
+
+/*The start of projects section*/
+#projects .projects{
+     flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#projects .projects-header h1{
+    margin-bottom: 50px;
+}
+#projects .all-projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#projects .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+#projects .project-info{
+    padding: 30px;
+    flex-basis: 50px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background-image: linear-gradient(60deg,#29323c 0%, #485563 100%);
+}
+#projects .project-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+}
+#projects .project-info h2{
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+#projects .project-info p{
+    color: white;
+    text-align: left;
+}
+#projects .project-img{
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#projects .project-img::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg,#29323c 0%, #485563 100%);
+    opacity: .8;
+}
+#projects .project-img img{
+    transition: .3s ease transform;
+}
+#projects .project-item:hover .project-img img{
+    transform: scale(1.1);
+}
+/*The End of projects section*/
+
+/* start: aboutme section*/
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+#about .col-left{
+    width: 250px;
+    height: 360px;
+}
+#about .col-right{
+    width: 100%;
+}
+#about .col-right h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+#about .col-right p{
+    margin-bottom: 20px;
+}
+#about .col-right .cta{
+    margin-bottom: 30px;
+    padding: 20px 10px;
+    font-size: 2rem;
+}
+#about .col-left .about-img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 10px solid white;
+}
+#about .col-left .about-img::after{
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid #ff9900;
+    z-index: -1;
+}
+
+/* End: aboutme section*/
+
+/* start here contact section*/
+#contact .contact{
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+#contact .contact-items{
+    width: 400px;
+}
+#contact .contact-item{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0 0 18px 0 #29323c;
+    flex-direction: column;
+    transition: .4s ease box-shadow;
+}
+#contact .contact-item:hover{
+    box-shadow: 0 0 8px #29323c;
+}
+#contact .contact-icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#contact .contact-info h1{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+#contact .contact-info h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: .2rem;
+}
+/* end here contact section*/
+
+/* start footer section*/
+#footer {
+    background-image: linear-gradient(60deg,#29323c 0%, #485563 100%);
+}
+#footer .footer{
+    min-height: 100px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#footer h2{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    letter-spacing: .1rem;
+}
+#footer .social-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer .social-icon{
+    margin-right: 30px;
+     margin-bottom: 10px;
+}
+#footer .social-item{
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+#footer .social-item img{
+    filter: contrast(1);
+    transition: .3s ease filter;
+}
+#footer .social-item:hover img{
+    filter: contrast(0);
+}
+#footer p{
+    color: white;
+    font-size: 1.3rem;
+    align-items: center;
+    justify-content: center;
+}
+/* end footer section*/
+
+/* start:@keyframes for animation effects*/
+@keyframes text_reavel_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes  text_reavel{
+    100%{
+        color: white;
+    }
+}
+@keyframes  text_reavel_name{
+    100%{
+        color: #ff9900;
+        font-weight: 500px;
+    }
+}/* End:@keyframes for animation effects*/
+
+/* start @ media section*/
+@media only screen and (min-width: 768px) {
+    .cta{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    h1.section-title{
+        font-size: 6rem;
+    }
+    #hero h1{
+        font-size: 7rem;
+    }
+    #services .service-bottom .service-item{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+    #projects .project-item{
+        flex-direction: row;
+    }
+    #projects .project-item:nth-child(even){
+        flex-direction: row-reverse;
+    }
+    #projects .project-item {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #projects .all-projects .project-info{
+        height: 100%;
+    }
+       #projects .all-projects .project-img{
+        height: 100%;
+    }
+
+    #about .about{
+        flex-direction: row;
+    }
+    #about .col-left{
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+    #about .col-left .about-img::after{
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid #ff9900;
+    }
+    #about .col-right{
+        text-align: left;
+        padding: 30px;
+    }
+    #about .col-right h1{
+        text-align: left;
+    }
+
+    #contact .contact{
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-width: 20vh;
+    }
+    #contact .contact-items{
+        flex-direction: row;
+        width: 100%;
+        display: flex;
+        padding: 20px;
+        margin: 0;
+    }
+    #contact .contact-item{
+        margin: 20px;
+        flex-direction: row;
+    }
+    #contact .contact-item .icon{
+        height: 100px;
+        width: 100px;
+    }
+#contact .contact-item .icon img{
+    object-fit: contain;
+}
+#contact .contact-item .contact-info{
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+}
+
+}
+/* end @ media section*/
