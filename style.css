@@ -143,8 +143,7 @@ p{
     float: none;
     display: block;
     text-align: left;
-    font-size: 7px;
-    text-transform: lowercase;
+    font-size: 5px;
   }
   .topnav .brand{
     display: none;
