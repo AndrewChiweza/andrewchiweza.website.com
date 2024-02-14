@@ -102,10 +102,10 @@ p{
 }
 
 /* Add an active class to highlight the current page */
-.topnav a.active {
+/*.topnav a.active {
   background-color: #ff9900;
   color: #1a0f00;
-}
+}*/
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
