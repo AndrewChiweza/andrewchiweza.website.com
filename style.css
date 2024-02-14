@@ -111,6 +111,13 @@ p{
 .topnav .icon {
   display: none;
 }
+.bar {
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
 
 .topnav .brand{
     float: right;
@@ -123,13 +130,15 @@ p{
 
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-/*@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
+    padding-top: 9px;
+    padding-right: 20px;
   }
-}*/
+}
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 700px) {
